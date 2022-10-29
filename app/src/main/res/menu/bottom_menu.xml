@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="schedule"
+        android:icon="@drawable/calendar"
+        android:id="@+id/calendar"/>
+
+    <item android:title="book"
+        android:icon="@drawable/book"
+        android:id="@+id/book"/>
+
+    <item android:title="weather"
+        android:icon="@drawable/weather"
+        android:id="@+id/weather"/>
+
+    <item android:title="settings"
+        android:icon="@drawable/settings"
+        android:id="@+id/settings"/>
+
+</menu>
