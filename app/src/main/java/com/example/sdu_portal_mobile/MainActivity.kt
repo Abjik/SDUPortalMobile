@@ -2,6 +2,7 @@ package com.example.sdu_portal_mobile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
