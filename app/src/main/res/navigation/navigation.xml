@@ -9,7 +9,11 @@
         android:id="@+id/loginFragment"
         android:name="com.example.sdu_portal_mobile.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/scheduleFragment"
         android:name="com.example.sdu_portal_mobile.ScheduleFragment"
