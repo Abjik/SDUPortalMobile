@@ -122,89 +122,89 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="450dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView"
-            android:orientation="vertical"
-            android:gravity="center">
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="450dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cardView"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="348dp"
-                android:layout_height="76dp"
-                android:background="@drawable/rounded_corner_mild"
-                android:elevation="6dp"
-                android:layout_marginTop="10dp">
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="348dp"-->
+<!--                android:layout_height="76dp"-->
+<!--                android:background="@drawable/rounded_corner_mild"-->
+<!--                android:elevation="6dp"-->
+<!--                android:layout_marginTop="10dp">-->
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="250dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="14dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="250dp"-->
+<!--                    android:layout_height="56dp"-->
+<!--                    android:layout_marginStart="14dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="@string/todo_title"
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        android:text="@string/todo_title"-->
 
-                        android:textColor="@color/white"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        >
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="24sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        >-->
 
-                    </TextView>
+<!--                    </TextView>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/todo_subtitle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:textColor="@color/gray_Button"
-                        android:textSize="20sp"
-                        >
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/todo_subtitle"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        android:textColor="@color/gray_Button"-->
+<!--                        android:textSize="20sp"-->
+<!--                        >-->
 
-                    </TextView>
+<!--                    </TextView>-->
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                <CheckBox
-                    android:id="@+id/checkBox1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:buttonTint="@color/white"
-                    android:scaleX="2.4"
-                    android:scaleY="2.4"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </CheckBox>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+<!--                <CheckBox-->
+<!--                    android:id="@+id/checkBox1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="15dp"-->
+<!--                    android:buttonTint="@color/white"-->
+<!--                    android:scaleX="2.4"-->
+<!--                    android:scaleY="2.4"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
 
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/rvMain"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="450dp"-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/cardView"-->
-<!--                android:scrollbars="vertical"-->
-<!--                app:layoutManager="LinearLayoutManager"/>-->
+<!--                </CheckBox>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMain"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                android:scrollbars="vertical"
+                app:layoutManager="LinearLayoutManager"/>
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
