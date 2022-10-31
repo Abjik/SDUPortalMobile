@@ -60,6 +60,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_acc_icon" />
+
+
+        <ImageView
+            android:id="@+id/pasword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/logback"
+            android:layout_alignTop="@+id/logback"
+            android:layout_alignEnd="@+id/logback"
+            android:layout_alignBottom="@+id/logback"
+            android:contentDescription="passwordInput"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.55"
+            app:srcCompat="@drawable/ic_pss" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
