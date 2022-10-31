@@ -110,6 +110,47 @@
             app:layout_constraintStart_toStartOf="@+id/logback"
             app:layout_constraintTop_toTopOf="@+id/logback"
             app:layout_constraintVertical_bias="0.92" />
+
+
+        <EditText
+            android:id="@+id/todoadd"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:background="@color/transperet"
+            android:fontFamily="@font/jost_semibold"
+            android:minHeight="48dp"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/logback"
+            app:layout_constraintEnd_toEndOf="@+id/loginInput"
+            app:layout_constraintHorizontal_bias="0.289"
+            app:layout_constraintStart_toStartOf="@+id/loginInput"
+            app:layout_constraintTop_toTopOf="@+id/logback"
+            app:layout_constraintVertical_bias="0.326" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:height="48dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logback"
+            app:layout_constraintEnd_toEndOf="@+id/pasword"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toStartOf="@+id/pasword"
+            app:layout_constraintTop_toTopOf="@+id/logback"
+            app:layout_constraintVertical_bias="0.58" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
