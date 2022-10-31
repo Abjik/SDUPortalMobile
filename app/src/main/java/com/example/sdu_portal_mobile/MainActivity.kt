@@ -24,15 +24,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    var user = findViewById<EditText>(R.id.login)
-    var password = findViewById<EditText>(R.id.password)
-
-    fun login(){
-        if(user.text.toString().equals("admin") && password.text.toString().equals("admin")){
-
-        }
-        else{
-
-        }
-    }
+//    var user = findViewById<EditText>(R.id.login)
+//    var password = findViewById<EditText>(R.id.password)
+//
+//    fun login(){
+//        if(user.text.toString().equals("admin") && password.text.toString().equals("admin")){
+//
+//        }
+//        else{
+//
+//        }
+//    }
 }
