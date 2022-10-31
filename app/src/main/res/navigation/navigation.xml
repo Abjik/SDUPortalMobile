@@ -30,9 +30,9 @@
         android:name="com.example.sdu_portal_mobile.WeatherFragment"
         android:label="fragment_weather"
         tools:layout="@layout/fragment_weather" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.sdu_portal_mobile.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/addTodoFragment"
+        android:name="com.example.sdu_portal_mobile.AddTodoFragment"
+        android:label="AddTodoFragment"
+        tools:layout="@layout/fragment_add_todo"/>
 </navigation>
