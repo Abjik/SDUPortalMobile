@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".BookFragment">
 
         <View
             android:layout_width="match_parent"
@@ -194,16 +195,16 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <!--    <androidx.recyclerview.widget.RecyclerView-->
-        <!--        android:id="@+id/rvMain"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="450dp"-->
-        <!--        android:layout_marginTop="30dp"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/cardView"-->
-        <!--        android:scrollbars="vertical"-->
-        <!--        app:layoutManager="LinearLayoutManager"/>-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvMain"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="450dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cardView"-->
+<!--                android:scrollbars="vertical"-->
+<!--                app:layoutManager="LinearLayoutManager"/>-->
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -226,4 +227,3 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
