@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lilla/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/layout/fragment_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Lilla/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/layout/login_page.xml" value="0.358695652173913" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/drawable-v24/ic_rectangle_2.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/drawable/book.xml" value="0.311" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/drawable/calendar.xml" value="0.311" />
