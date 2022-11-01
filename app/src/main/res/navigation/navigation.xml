@@ -24,12 +24,26 @@
         android:id="@+id/scheduleFragment"
         android:name="com.example.sdu_portal_mobile.ScheduleFragment"
         android:label="fragment_schedule"
-        tools:layout="@layout/fragment_schedule" />
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bookFragment"
         android:name="com.example.sdu_portal_mobile.BookFragment"
         android:label="fragment_book"
-        tools:layout="@layout/fragment_book" />
+        tools:layout="@layout/fragment_book" >
+        <action
+            android:id="@+id/action_bookFragment_to_doneTodoFragment"
+            app:destination="@id/doneTodoFragment" />
+        <action
+            android:id="@+id/action_bookFragment_to_addTodoFragment"
+            app:destination="@id/addTodoFragment" />
+        <action
+            android:id="@+id/action_bookFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.sdu_portal_mobile.SettingsFragment"
@@ -39,10 +53,29 @@
         android:id="@+id/weatherFragment"
         android:name="com.example.sdu_portal_mobile.WeatherFragment"
         android:label="fragment_weather"
-        tools:layout="@layout/fragment_weather" />
+        tools:layout="@layout/fragment_weather" >
+        <action
+            android:id="@+id/action_weatherFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addTodoFragment"
         android:name="com.example.sdu_portal_mobile.AddTodoFragment"
         android:label="AddTodoFragment"
-        tools:layout="@layout/fragment_add_todo"/>
+        tools:layout="@layout/fragment_add_todo">
+        <action
+            android:id="@+id/action_addTodoFragment_to_bookFragment"
+            app:destination="@id/bookFragment"
+            app:popUpTo="@id/bookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doneTodoFragment"
+        android:name="com.example.sdu_portal_mobile.DoneTodoFragment"
+        android:label="fragment_done_todo"
+        tools:layout="@layout/fragment_done_todo" >
+        <action
+            android:id="@+id/action_doneTodoFragment_to_bookFragment"
+            app:destination="@id/bookFragment"
+            app:popUpTo="@id/doneTodoFragment" />
+    </fragment>
 </navigation>
