@@ -19,4 +19,102 @@
         app:layout_constraintRight_toRightOf="parent">
     </View>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDones"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/main">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfDay">
+
+                <Button
+                    android:id="@+id/buttonTODO"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/jost_bold"
+                    android:letterSpacing="0"
+                    android:text="@string/button_todo"
+                    android:textColor="@color/gray_Button"
+                    android:textSize="30sp"
+                    android:paddingEnd="20dp"/>
+
+                <Button
+                    android:id="@+id/buttonDONE"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/jost_bold"
+                    android:letterSpacing="0"
+                    android:text="@string/button_done_lined"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:paddingStart="20dp"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            <TextView
+                android:id="@+id/nameOfDay"
+                android:layout_width="196dp"
+                android:layout_height="60dp"
+
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:text="@string/day"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageVectorBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/vector"
+
+                app:layout_constraintBottom_toBottomOf="@+id/nameOfDay"
+                app:layout_constraintEnd_toStartOf="@+id/nameOfDay"
+                app:layout_constraintTop_toTopOf="@+id/nameOfDay"
+                app:srcCompat="@drawable/vector_back" />
+
+            <ImageView
+                android:id="@+id/imageVectorForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/vector"
+
+                app:layout_constraintBottom_toBottomOf="@+id/nameOfDay"
+                app:layout_constraintStart_toEndOf="@+id/nameOfDay"
+                app:layout_constraintTop_toTopOf="@+id/nameOfDay"
+                app:srcCompat="@drawable/vector_forward" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,5 +60,9 @@
         android:id="@+id/donesFragment2"
         android:name="com.example.sdu_portal_mobile.DonesFragment"
         android:label="fragment_dones"
-        tools:layout="@layout/fragment_dones" />
+        tools:layout="@layout/fragment_dones" >
+        <action
+            android:id="@+id/action_donesFragment2_to_todosFragment"
+            app:destination="@id/todosFragment" />
+    </fragment>
 </navigation>
