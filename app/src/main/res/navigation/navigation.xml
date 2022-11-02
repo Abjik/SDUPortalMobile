@@ -52,5 +52,13 @@
         <action
             android:id="@+id/action_todosFragment_to_addTodoFragment"
             app:destination="@id/addTodoFragment" />
+        <action
+            android:id="@+id/action_todosFragment_to_donesFragment2"
+            app:destination="@id/donesFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/donesFragment2"
+        android:name="com.example.sdu_portal_mobile.DonesFragment"
+        android:label="fragment_dones"
+        tools:layout="@layout/fragment_dones" />
 </navigation>
