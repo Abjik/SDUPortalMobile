@@ -23,6 +23,7 @@ class TodosFragment : Fragment() {
         binding.buttonDONE.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_todosFragment_to_donesFragment2)
         }
+
         return binding.root
     }
 }
