@@ -10,15 +10,15 @@
         android:name="com.example.sdu_portal_mobile.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_scheduleFragment"
-            app:destination="@id/scheduleFragment" />
         <argument
             android:name="login"
             app:argType="string" />
         <argument
             android:name="password"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_loginFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
     </fragment>
     <fragment
         android:id="@+id/scheduleFragment"

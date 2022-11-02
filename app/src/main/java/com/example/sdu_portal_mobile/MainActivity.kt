@@ -16,14 +16,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        navController= Navigation.findNavController(this,R.id.activity_main_nav_host_fragment)
-        setupWithNavController(binding.bottomNavigationView,navController)
-
-    }
+        navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
+        setupWithNavController(binding.bottomNavigationView, navController)
 
 //    var user = findViewById<EditText>(R.id.login)
 //    var password = findViewById<EditText>(R.id.password)
@@ -36,4 +34,5 @@ class MainActivity : AppCompatActivity() {
 //
 //        }
 //    }
+    }
 }
