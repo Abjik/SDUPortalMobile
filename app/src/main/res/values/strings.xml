@@ -21,9 +21,10 @@
     <string name="welcome">WELCOME</string>
     <string name="fab_description">fab</string>
     <string name="day">SOMEDAY</string>
-    <string name="button_todo"><u>TODO</u></string>
-    <string name="button_done"><u>DONE</u></string>
-    <string name="button_done1">TODO</string>
+    <string name="button_todo_lined"><u>TODO</u></string>
+    <string name="button_done_lined"><u>DONE</u></string>
+    <string name="button_todo">TODO</string>
+    <string name="button_done">DONE</string>
     <string name="todo_title">TODO TITLE</string>
     <string name="todo_subtitle">TODO SUBTITLE</string>
     <string name="login">LOGIN</string>

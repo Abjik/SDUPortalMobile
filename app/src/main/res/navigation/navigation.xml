@@ -26,15 +26,6 @@
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" />
     <fragment
-        android:id="@+id/bookFragment"
-        android:name="com.example.sdu_portal_mobile.BookFragment"
-        android:label="fragment_book"
-        tools:layout="@layout/fragment_book" >
-        <action
-            android:id="@+id/action_bookFragment_to_doneTodoFragment"
-            app:destination="@id/doneTodoFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.sdu_portal_mobile.SettingsFragment"
         android:label="fragment_settings"
@@ -50,19 +41,16 @@
         android:label="AddTodoFragment"
         tools:layout="@layout/fragment_add_todo">
         <action
-            android:id="@+id/action_addTodoFragment_to_doneTodoFragment"
-            app:destination="@id/doneTodoFragment" />
+            android:id="@+id/action_addTodoFragment_to_todosFragment"
+            app:destination="@id/todosFragment" />
     </fragment>
     <fragment
-        android:id="@+id/doneTodoFragment"
-        android:name="com.example.sdu_portal_mobile.DoneTodoFragment"
-        android:label="fragment_done_todo"
-        tools:layout="@layout/fragment_done_todo" >
+        android:id="@+id/todosFragment"
+        android:name="com.example.sdu_portal_mobile.TodosFragment"
+        android:label="fragment_todos"
+        tools:layout="@layout/fragment_todos" >
         <action
-            android:id="@+id/action_doneTodoFragment_to_addTodoFragment"
+            android:id="@+id/action_todosFragment_to_addTodoFragment"
             app:destination="@id/addTodoFragment" />
-        <action
-            android:id="@+id/action_doneTodoFragment_to_bookFragment"
-            app:destination="@id/bookFragment" />
     </fragment>
 </navigation>
