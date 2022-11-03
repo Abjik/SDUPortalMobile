@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI.setupWithNavController
@@ -26,7 +27,13 @@ class MainActivity : AppCompatActivity() {
         navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
         setupWithNavController(binding.bottomNavigationView, navController)
 
-
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            val bottomNavVisible = when (destination.id) {
+                R.id.loginFragment -> false
+                else -> true
+            }
+            binding.bottomNavigationView.isVisible = bottomNavVisible
+        }
 //    var user = findViewById<EditText>(R.id.login)
 //    var password = findViewById<EditText>(R.id.password)
 //
