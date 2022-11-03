@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/SDUPortalMobile/app/src/main/res/layout/activity_main.xml" value="0.16576086956521738" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SDUPortalMobile/app/src/main/res/layout/fragment_todos.xml" value="0.16576086956521738" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SDUPortalMobile/app/src/main/res/layout/list_item.xml" value="0.16576086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/layout/activity_main.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/layout/done_todo.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SDU_Portal_Mobile/app/src/main/res/layout/fragment_add_todo.xml" value="0.358695652173913" />

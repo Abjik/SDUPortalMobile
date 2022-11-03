@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    private lateinit var rvAdapter: RVAdapter
-    private lateinit var taskList : List<TodoModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +25,6 @@ class MainActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
         setupWithNavController(binding.bottomNavigationView, navController)
-
-//        loadTodos()
-//        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
-//        binding.rv_list.setLayoutManager(layoutManager)
-//        rvAdapter = RVAdapter(taskList)
-//        binding.rv_list.adapter = rvAdapter
-
-
 
 //    var user = findViewById<EditText>(R.id.login)
 //    var password = findViewById<EditText>(R.id.password)
@@ -47,13 +37,5 @@ class MainActivity : AppCompatActivity() {
 //
 //        }
 //    }
-    }
-    private fun loadTodos() {
-        taskList = listOf(
-            TodoModel("Java quiz" , "until Monday"),
-            TodoModel("Kotlin project" , "until Monday"),
-            TodoModel("Python pandas" , "until Monday"),
-            TodoModel("JavaScript web" , "until Monday"),
-        )
     }
 }
