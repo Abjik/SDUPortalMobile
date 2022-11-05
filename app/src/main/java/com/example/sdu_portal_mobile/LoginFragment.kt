@@ -18,8 +18,6 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentLoginBinding.inflate(inflater)
-
-        binding.button.setOnClickListener{
             binding.button.setOnClickListener { view: View ->
 
                 if(binding.login.text.toString().isNullOrBlank() && binding.password.text.toString().isNullOrBlank()){
@@ -27,9 +25,8 @@ class LoginFragment : Fragment() {
                 }else{
                     view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
                 }
-            }
-        }
 
+            }
         return binding.root
     }
 }
