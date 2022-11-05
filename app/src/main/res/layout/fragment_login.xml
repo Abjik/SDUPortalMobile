@@ -122,7 +122,7 @@
             android:background="@color/transperet"
             android:fontFamily="@font/jost_semibold"
             android:minHeight="48dp"
-            android:text="@string/login"
+            android:hint="@string/login"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/loginInput"
