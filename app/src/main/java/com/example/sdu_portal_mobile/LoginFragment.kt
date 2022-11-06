@@ -1,5 +1,6 @@
 package com.example.sdu_portal_mobile
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
