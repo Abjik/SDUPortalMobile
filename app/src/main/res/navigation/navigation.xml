@@ -34,7 +34,9 @@
         android:id="@+id/weatherFragment"
         android:name="com.example.sdu_portal_mobile.WeatherFragment"
         android:label="fragment_weather"
-        tools:layout="@layout/fragment_weather" />
+        tools:layout="@layout/fragment_weather" >
+
+    </fragment>
     <fragment
         android:id="@+id/addTodoFragment"
         android:name="com.example.sdu_portal_mobile.AddTodoFragment"
@@ -65,4 +67,9 @@
             android:id="@+id/action_donesFragment2_to_todosFragment"
             app:destination="@id/todosFragment" />
     </fragment>
+    <activity
+        android:id="@+id/weatherActivity"
+        android:name="com.example.sdu_portal_mobile.WeatherActivity"
+        android:label="WeatherActivity"
+        tools:layout="@layout/activity_weather"/>
 </navigation>
