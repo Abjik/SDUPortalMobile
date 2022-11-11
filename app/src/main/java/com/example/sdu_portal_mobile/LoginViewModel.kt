@@ -10,5 +10,5 @@ import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 
 class LoginViewModel: ViewModel() {
     private val _user = MutableLiveData("test")
-    val user: LiveData<String> = _user
+    val user = _user
 }
