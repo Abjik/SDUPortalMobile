@@ -25,12 +25,18 @@ class WeatherActivity : AppCompatActivity() {
 
     val CITY: String = "almaty,kz"
     val API: String = "06c921750b9a82d8f5d1294e1586276f" // Use API key
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_weather)
 
+
+
         weatherTask().execute()
+
 
     }
 

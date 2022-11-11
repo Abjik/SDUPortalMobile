@@ -12,7 +12,7 @@
 
     <item android:title="weather"
         android:icon="@drawable/weather"
-        android:id="@+id/weatherFragment"/>
+        android:id="@id/weatherActivity"/>
 
     <item android:title="settings"
         android:icon="@drawable/settings"
