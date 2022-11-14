@@ -1,4 +1,4 @@
-package com.example.sdu_portal_mobile
+package com.example.sdu_portal_mobile.fragments
 
 import android.text.Editable
 import android.view.LayoutInflater
