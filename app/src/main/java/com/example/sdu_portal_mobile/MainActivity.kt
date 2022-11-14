@@ -13,6 +13,8 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
+import com.example.sdu_portal_mobile.DB.userTable
 import com.example.sdu_portal_mobile.databinding.ActivityMainBinding
 import com.example.sdu_portal_mobile.model.RVAdapter
 import com.example.sdu_portal_mobile.model.TodoModel
