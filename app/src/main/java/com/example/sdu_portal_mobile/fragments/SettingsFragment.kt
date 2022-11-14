@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.sdu_portal_mobile.LoginViewModel
 import com.example.sdu_portal_mobile.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
