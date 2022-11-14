@@ -7,7 +7,7 @@
     android:padding="25dp"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient"
-    tools:context=".WeatherActivity">
+    tools:context=".presentation.WeatherActivity">
 
     <RelativeLayout
         android:id="@+id/mainContainer"
