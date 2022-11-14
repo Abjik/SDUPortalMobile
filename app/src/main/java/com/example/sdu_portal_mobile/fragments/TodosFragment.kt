@@ -1,4 +1,4 @@
-package com.example.sdu_portal_mobile
+package com.example.sdu_portal_mobile.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentTodosBinding
 import com.example.sdu_portal_mobile.model.RVAdapter
 import com.example.sdu_portal_mobile.model.TodoModel

@@ -1,4 +1,4 @@
-package com.example.sdu_portal_mobile
+package com.example.sdu_portal_mobile.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentDonesBinding
-import com.example.sdu_portal_mobile.databinding.FragmentTodosBinding
 
 class DonesFragment : Fragment() {
 

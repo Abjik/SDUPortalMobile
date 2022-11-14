@@ -1,4 +1,4 @@
-package com.example.sdu_portal_mobile
+package com.example.sdu_portal_mobile.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 import com.example.sdu_portal_mobile.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
