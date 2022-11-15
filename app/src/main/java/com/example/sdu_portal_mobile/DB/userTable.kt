@@ -4,8 +4,15 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "StudInf")
-data class userTable(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int
-)
+@Entity(tableName = "students")
+data class StudentsTable(
+    @PrimaryKey(autoGenerate = true) val id: Long,
+    val users: String,
+    val pass: String
+){
+    fun toStudentsTable(): Students = Students(
+        id = id,
+        users = users,
+        pass = pass
+    )
+}

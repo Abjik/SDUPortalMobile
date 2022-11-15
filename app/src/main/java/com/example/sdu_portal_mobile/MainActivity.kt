@@ -2,22 +2,13 @@ package com.example.sdu_portal_mobile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
-import com.example.sdu_portal_mobile.DB.userTable
+import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.databinding.ActivityMainBinding
-import com.example.sdu_portal_mobile.model.RVAdapter
-import com.example.sdu_portal_mobile.model.TodoModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +30,9 @@ class MainActivity : AppCompatActivity() {
             }
             binding.bottomNavigationView.isVisible = bottomNavVisible
         }
+
+        Room.databaseBuilder(applicationContext, AccauntDatabase::class.java, "students.db")
+            .createFromAsset("database/stud.db").build()
     }
 }
 
