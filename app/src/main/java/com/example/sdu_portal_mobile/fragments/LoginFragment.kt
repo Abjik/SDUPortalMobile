@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.room.Room
 import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 
