@@ -6,8 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.LoginViewModel
 import com.example.sdu_portal_mobile.databinding.FragmentSettingsBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class SettingsFragment : Fragment() {
     val viewModel: LoginViewModel by viewModels()
@@ -24,6 +28,13 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.user.observe(viewLifecycleOwner) {
             binding.username.text = viewModel.user.value.toString()
+
         }
+        lifecycleScope.launch {
+            launch(Dispatchers.IO) {
+                println(AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers())
+            }
+        }
+
     }
 }

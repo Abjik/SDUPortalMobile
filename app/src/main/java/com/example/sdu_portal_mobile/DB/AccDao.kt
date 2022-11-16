@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface AccDao {
 
-//    @Query("SELECT * FROM students WHERE users = users")
-//    fun getId(users: String): Flow<AccauntTuple?>
+    @Query("SELECT * FROM students WHERE users = users")
+    fun loadAllUsers(): Array<AccauntTuple>
 
 }

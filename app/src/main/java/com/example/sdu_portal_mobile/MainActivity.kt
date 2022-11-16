@@ -1,5 +1,6 @@
 package com.example.sdu_portal_mobile
 
+import android.graphics.Typeface.createFromAsset
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
@@ -30,9 +31,7 @@ class MainActivity : AppCompatActivity() {
             }
             binding.bottomNavigationView.isVisible = bottomNavVisible
         }
-
-        Room.databaseBuilder(applicationContext, AccauntDatabase::class.java, "students.db")
-            .createFromAsset("database/stud.db").build()
+        AccauntDatabase.getInstance(this)
     }
 }
 
