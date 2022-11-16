@@ -1,7 +1,8 @@
 package com.example.sdu_portal_mobile.DB
 
 data class Students (
-    val id: Long,
-    val users: String,
-    val pass: String
+    val key: Long,
+    val ID: Int,
+    val Name: String,
+    val Speciality: String
     )

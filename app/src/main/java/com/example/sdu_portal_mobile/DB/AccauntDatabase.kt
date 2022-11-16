@@ -10,7 +10,8 @@ import androidx.room.RoomDatabase
     version = 1,
     entities = [
         StudentsTable::class
-    ]
+    ],
+    exportSchema = true
 )
 abstract class AccauntDatabase: RoomDatabase() {
     abstract fun getAccDao(): AccDao
@@ -26,8 +27,8 @@ abstract class AccauntDatabase: RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         AccauntDatabase::class.java,
-                        "test"
-                    ).createFromAsset("stud.db")
+                        "test")
+                        .createFromAsset("stud.db")
                         .fallbackToDestructiveMigration()
                         .build()
                     INSTANCE = instance

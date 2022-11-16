@@ -6,13 +6,16 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "students")
 data class StudentsTable(
-    @PrimaryKey(autoGenerate = true) val id: Long,
-    val users: String,
-    val pass: String
+    @PrimaryKey(autoGenerate = true) val key: Long,
+    val ID: Int,
+    val Name: String,
+    val Surname: String,
+    val Speciality: String
 ){
     fun toStudentsTable(): Students = Students(
-        id = id,
-        users = users,
-        pass = pass
+        key = key,
+        ID = ID,
+        Name = Name,
+        Speciality = Speciality
     )
 }

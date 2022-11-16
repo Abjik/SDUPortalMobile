@@ -1,15 +1,20 @@
 package com.example.sdu_portal_mobile.fragments
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.room.Room
+import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
 
@@ -18,6 +23,11 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        lifecycleScope.launch {
+            launch(Dispatchers.IO) {
+                println(AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers())
+            }
+        }
         val binding = FragmentLoginBinding.inflate(inflater)
             binding.button.setOnClickListener { view: View ->
 

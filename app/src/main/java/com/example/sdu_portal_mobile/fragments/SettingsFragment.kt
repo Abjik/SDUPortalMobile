@@ -30,11 +30,5 @@ class SettingsFragment : Fragment() {
             binding.username.text = viewModel.user.value.toString()
 
         }
-        lifecycleScope.launch {
-            launch(Dispatchers.IO) {
-                println(AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers())
-            }
-        }
-
     }
 }
