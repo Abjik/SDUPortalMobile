@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
@@ -28,6 +29,8 @@ class LoginFragment : Fragment() {
                 println(AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers())
             }
         }
+
+
         val binding = FragmentLoginBinding.inflate(inflater)
             binding.button.setOnClickListener { view: View ->
 
@@ -36,6 +39,20 @@ class LoginFragment : Fragment() {
                 }else{
                     view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
                 }
+
+//                val logi = binding.login.text.toString()
+//                val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().size
+//                val idname = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().toString()
+//                for (i in IntRange(0, size)){
+//                    if (logi.equals(idname[i])){
+//                        view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
+//                    }
+//                    else{
+//                        view.findNavController().navigate(R.id.loginFragment)
+//                        val toast = Toast.makeText(context, "text", Toast.LENGTH_SHORT)
+//                        toast.show()
+//                    }
+//                }
 
             }
         return binding.root

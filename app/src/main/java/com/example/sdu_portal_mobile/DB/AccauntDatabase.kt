@@ -28,7 +28,7 @@ abstract class AccauntDatabase: RoomDatabase() {
                         context.applicationContext,
                         AccauntDatabase::class.java,
                         "test")
-                        .createFromAsset("stud.db")
+                        .createFromAsset("database/stud.db")
                         .fallbackToDestructiveMigration()
                         .build()
                     INSTANCE = instance
