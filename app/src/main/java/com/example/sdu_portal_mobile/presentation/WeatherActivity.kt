@@ -19,7 +19,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.sdu_portal_mobile.presentation.ui.theme.DarkBlue
-import com.example.sdu_portal_mobile.presentation.ui.theme.DeepBlue
+import com.example.sdu_portal_mobile.presentation.ui.theme.PinkBlue
 import com.example.sdu_portal_mobile.presentation.ui.theme.WeatherAppTheme
 
 import dagger.hilt.android.AndroidEntryPoint
@@ -55,7 +55,7 @@ class WeatherActivity : ComponentActivity() {
                     ) {
                         WeatherCard(
                             state = viewModel.state,
-                            backgroundColor = DeepBlue
+                            backgroundColor = PinkBlue
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         WeatherForecast(state = viewModel.state)
