@@ -20,6 +20,7 @@ class LoginViewModel: ViewModel() {
     val user = _user
     fun onLoginClicked() {
         viewModelScope.launch {
+
 //                val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().size
 //                val idname = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().toString()
         }
