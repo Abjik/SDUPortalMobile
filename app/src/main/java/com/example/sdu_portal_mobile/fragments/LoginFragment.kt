@@ -24,35 +24,31 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        lifecycleScope.launch {
-            launch(Dispatchers.IO) {
-                println(AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers())
-            }
-        }
-
 
         val binding = FragmentLoginBinding.inflate(inflater)
             binding.button.setOnClickListener { view: View ->
-
-                if(binding.login.text.toString().isNullOrBlank() && binding.password.text.toString().isNullOrBlank()){
-                    view.findNavController().navigate(R.id.loginFragment)
-                }else{
-                    view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
-                }
-
-//                val logi = binding.login.text.toString()
-//                val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().size
-//                val idname = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().toString()
-//                for (i in IntRange(0, size)){
-//                    if (logi.equals(idname[i])){
-//                        view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
-//                    }
-//                    else{
-//                        view.findNavController().navigate(R.id.loginFragment)
-//                        val toast = Toast.makeText(context, "text", Toast.LENGTH_SHORT)
-//                        toast.show()
-//                    }
+//                if(binding.login.text.toString().isNullOrBlank() && binding.password.text.toString().isNullOrBlank()){
+//                    view.findNavController().navigate(R.id.loginFragment)
+//                }else{
+//                    view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
 //                }
+                lifecycleScope.launch {
+                    launch(Dispatchers.IO) {
+                        val logi = binding.login.text.toString()
+                        val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().size
+                        val idname = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().toString()
+                        for (i in IntRange(0, size + 1)){
+                            if (logi.equals(idname[i])){
+                                view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
+                            }
+                            else{
+//                                view.findNavController().navigate(R.id.loginFragment)
+//                                val toast = Toast.makeText(context, "text", Toast.LENGTH_SHORT)
+//                                toast.show()
+                            }
+                        }
+                    }
+                }
 
             }
         return binding.root
