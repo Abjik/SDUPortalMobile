@@ -47,6 +47,7 @@ class LoginFragment : Fragment() {
                         if (logi == idname[i].toString()) {
                             test = true
                             break
+
                         }
                     }
 
