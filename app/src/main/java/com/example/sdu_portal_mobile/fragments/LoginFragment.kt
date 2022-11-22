@@ -16,41 +16,51 @@ import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class LoginFragment : Fragment() {
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
 
         val binding = FragmentLoginBinding.inflate(inflater)
-            binding.button.setOnClickListener { view: View ->
+        binding.button.setOnClickListener { view: View ->
 //                if(binding.login.text.toString().isNullOrBlank() && binding.password.text.toString().isNullOrBlank()){
 //                    view.findNavController().navigate(R.id.loginFragment)
 //                }else{
 //                    view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
 //                }
-                lifecycleScope.launch {
-                    launch(Dispatchers.IO) {
-                        val logi = binding.login.text.toString()
-                        val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().size
-                        val idname = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().toString()
-                        for (i in IntRange(0, size + 1)){
-                            if (logi.equals(idname[i])){
-                                view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
-                            }
-                            else{
-//                                view.findNavController().navigate(R.id.loginFragment)
-//                                val toast = Toast.makeText(context, "text", Toast.LENGTH_SHORT)
-//                                toast.show()
-                            }
+
+            lifecycleScope.launch {
+                var test: Boolean = false
+                withContext(Dispatchers.IO) {
+                    val logi = binding.login.text.toString()
+                    val size = AccauntDatabase.getInstance(requireContext()).getAccDao()
+                        .loadAllUsers().size
+                    val idname =
+                        AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers()
+
+                    for (i in IntRange(0, size - 1)) {
+                        if (logi == idname[i].toString()) {
+                            test = true
+                            break
+
                         }
                     }
-                }
 
+                }
+                if (test) {
+                    view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
+                } else {
+                    view.findNavController().navigate(R.id.loginFragment)
+                }
             }
+
+
+        }
         return binding.root
     }
 }
