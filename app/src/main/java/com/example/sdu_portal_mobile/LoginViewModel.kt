@@ -6,21 +6,22 @@ import com.example.sdu_portal_mobile.repository.UserRepository
 import kotlinx.coroutines.launch
 
         //private val repository: UserRepository
-class LoginViewModel(private val repository: UserRepository): ViewModel() {
-    private val _user = MutableLiveData("TEST")
-    val user = _user
-//    val allUser: LiveData<Int> = repository.allUsers
-    val UsersSize: Int = repository.sizes
-
-    fun onLoginClicked() {
-        viewModelScope.launch {
-//            val idname = repository.allUsers
-            val size = repository.sizes
-            val testi: Boolean = false
-
+class LoginViewModel(): ViewModel() {
+            private val _user = MutableLiveData("TEST")
+            val user = _user
         }
-    }
-}
+//    val allUser: LiveData<Int> = repository.allUsers
+//    val UsersSize: Int = repository.sizes
+
+//    fun onLoginClicked() {
+//        viewModelScope.launch {
+//            val idname = repository.allUsers
+//            val size = repository.sizes
+//            val testi: Boolean = false
+//
+//        }
+//    }
+//}
 
 //
 //class UserViewModelFactory(private val repository: UserRepository): ViewModelProvider.Factory{
