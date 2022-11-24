@@ -8,6 +8,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 
 class UserRepository(private val accDao: AccDao){
-//    val allUsers: LiveData<List<Int>> = accDao.loadAllUsers()
-//    val sizes : Int = accDao.loadAllUsersSize()
+//    val allUsers: LiveData<Int> = accDao.loadAllUsers()
+    val sizes : Int = accDao.loadAllUsersSize()
 }

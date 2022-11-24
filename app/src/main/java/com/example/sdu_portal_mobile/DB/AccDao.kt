@@ -15,5 +15,5 @@ interface AccDao {
     fun loadAllUsers(): List<Int>
 
     @Query("select COUNT(ID) from students")
-    suspend fun loadAllUsersSize(): Int
+    fun loadAllUsersSize(): Int
 }

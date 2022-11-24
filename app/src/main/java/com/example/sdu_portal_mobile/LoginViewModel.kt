@@ -1,9 +1,7 @@
 package com.example.sdu_portal_mobile
 
-import androidx.core.content.ContentProviderCompat.requireContext
+
 import androidx.lifecycle.*
-import com.example.sdu_portal_mobile.DB.AccauntDatabase
-import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 import com.example.sdu_portal_mobile.repository.UserRepository
 import kotlinx.coroutines.launch
 
@@ -11,11 +9,15 @@ import kotlinx.coroutines.launch
 class LoginViewModel(private val repository: UserRepository): ViewModel() {
     private val _user = MutableLiveData("TEST")
     val user = _user
-//    val allUser: LiveData<List<Int>> = repository.allUsers
+//    val allUser: LiveData<Int> = repository.allUsers
+    val UsersSize: Int = repository.sizes
+
     fun onLoginClicked() {
         viewModelScope.launch {
-//            val idname = repository.allUsers.value
+//            val idname = repository.allUsers
+            val size = repository.sizes
             val testi: Boolean = false
+
         }
     }
 }
