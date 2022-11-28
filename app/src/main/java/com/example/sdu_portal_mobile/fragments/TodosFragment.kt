@@ -31,6 +31,8 @@ class TodosFragment : Fragment() {
             view.findNavController().navigate(R.id.action_todosFragment_to_donesFragment2)
         }
 
+
+
         loadTodos()
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)
         binding.rvList.setLayoutManager(layoutManager)
