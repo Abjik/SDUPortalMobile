@@ -4,7 +4,7 @@ import java.util.concurrent.Flow
 
 class TaskRepository (private val dao: TaskDAO){
 
-    val subscriber = dao.getAllTask()
+    val tasks = dao.getAllTask()
 
     suspend fun insert(task: Task):Long{
         return dao.insertTask(task)
