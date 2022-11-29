@@ -28,7 +28,6 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.user.observe(viewLifecycleOwner) {
             binding.username.text = viewModel.user.value.toString()
-
         }
     }
 }

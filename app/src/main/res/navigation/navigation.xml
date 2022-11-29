@@ -71,5 +71,6 @@
         android:id="@+id/weatherActivity"
         android:name="com.example.sdu_portal_mobile.presentation.WeatherActivity"
         android:label="WeatherActivity"
-        tools:layout="@layout/activity_weather"/>
+        tools:layout="@layout/activity_weather">
+    </activity>
 </navigation>

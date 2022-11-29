@@ -1,60 +1,76 @@
 package com.example.sdu_portal_mobile.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.sdu_portal_mobile.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ScheduleFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ScheduleFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    var names =
+        arrayOf("9:00 10:00", "10:00 11:00", "11:00 12:00", "12:00 13:00", "13:00 14:00", "14:00 15:00", "15:00 16:00", "16:00 17:00", "17:00 18:00")
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    companion object {
+
+        val weekdays =
+            arrayOf("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+        var day: String = weekdays[0]
+
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_schedule, container, false)
-    }
+        val view =
+            LayoutInflater.from(context).inflate(R.layout.fragment_schedule, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ScheduleFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ScheduleFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        val weekdayView = view.findViewById<TextView>(R.id.nameOfDay)
+        weekdayView.text = day
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.ScheduleRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this.context)
+        recyclerView.adapter = ListAdapter(names)
+
+        val leftArrow = view.findViewById<ImageView>(R.id.imageVectorBack)
+        val rightArrow = view.findViewById<ImageView>(R.id.imageVectorForward)
+
+        leftArrow.setOnClickListener{
+
+            if(weekdays.indexOf(day) != 0) {
+                day = weekdays[weekdays.indexOf(day)-1]
             }
+            else{
+                day = weekdays[6]
+            }
+
+            val fragment = ScheduleFragment()
+
+
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.activity_main_nav_host_fragment, fragment)?.commit()
+        }
+        rightArrow.setOnClickListener{
+
+            if(weekdays.indexOf(day) != 6) {
+                day = weekdays[weekdays.indexOf(day)+1]
+            }
+            else{
+                day = weekdays[0]
+            }
+
+            val fragment = ScheduleFragment()
+
+
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.activity_main_nav_host_fragment, fragment)?.commit()
+        }
+        return view
     }
 }
