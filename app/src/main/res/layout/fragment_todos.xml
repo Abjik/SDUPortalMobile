@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragments.TodosFragment">
 
     <data>
+
         <variable
             name="todosViewModel"
             type="com.example.sdu_portal_mobile.rvmvvm.TaskViewModel" />
@@ -13,158 +13,149 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <View
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/main"
+        android:layout_height="match_parent">
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-    </View>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/main"
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></View>
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:background="@color/main">
+            app:cardCornerRadius="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.button.MaterialButtonToggleGroup
-                android:id="@+id/toggleButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameOfDay">
 
-                <Button
-                    android:id="@+id/buttonTODO"
-                    style="?attr/borderlessButtonStyle"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/main">
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameOfDay">
 
-                    android:fontFamily="@font/jost_bold"
-                    android:letterSpacing="0"
-                    android:text="@string/button_todo_lined"
+                    <Button
+                        android:id="@+id/buttonTODO"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/jost_bold"
+                        android:letterSpacing="0"
+                        android:paddingEnd="20dp"
+                        android:text="@string/button_todo_lined"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/buttonDONE"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/jost_bold"
+                        android:letterSpacing="0"
+                        android:paddingStart="20dp"
+                        android:text="@string/button_done"
+                        android:textColor="@color/gray_Button"
+                        android:textSize="30sp" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+                <TextView
+                    android:id="@+id/nameOfDay"
+                    android:layout_width="196dp"
+                    android:layout_height="60dp"
+
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/rounded_corner"
+                    android:gravity="center"
+                    android:text="@string/day"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:paddingEnd="20dp"/>
 
-                <Button
-                    android:id="@+id/buttonDONE"
-                    style="?attr/borderlessButtonStyle"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageVectorBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/vector"
 
-                    android:fontFamily="@font/jost_bold"
-                    android:letterSpacing="0"
-                    android:text="@string/button_done"
-                    android:textColor="@color/gray_Button"
-                    android:textSize="30sp"
-                    android:paddingStart="20dp"/>
-            </com.google.android.material.button.MaterialButtonToggleGroup>
+                    app:layout_constraintBottom_toBottomOf="@+id/nameOfDay"
+                    app:layout_constraintEnd_toStartOf="@+id/nameOfDay"
+                    app:layout_constraintTop_toTopOf="@+id/nameOfDay"
+                    app:srcCompat="@drawable/vector_back" />
 
+                <ImageView
+                    android:id="@+id/imageVectorForward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/vector"
 
-            <TextView
-                android:id="@+id/nameOfDay"
-                android:layout_width="196dp"
-                android:layout_height="60dp"
-
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/rounded_corner"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageVectorBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/vector"
-
-                app:layout_constraintBottom_toBottomOf="@+id/nameOfDay"
-                app:layout_constraintEnd_toStartOf="@+id/nameOfDay"
-                app:layout_constraintTop_toTopOf="@+id/nameOfDay"
-                app:srcCompat="@drawable/vector_back" />
-
-            <ImageView
-                android:id="@+id/imageVectorForward"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/vector"
-
-                app:layout_constraintBottom_toBottomOf="@+id/nameOfDay"
-                app:layout_constraintStart_toEndOf="@+id/nameOfDay"
-                app:layout_constraintTop_toTopOf="@+id/nameOfDay"
-                app:srcCompat="@drawable/vector_forward" />
+                    app:layout_constraintBottom_toBottomOf="@+id/nameOfDay"
+                    app:layout_constraintStart_toEndOf="@+id/nameOfDay"
+                    app:layout_constraintTop_toTopOf="@+id/nameOfDay"
+                    app:srcCompat="@drawable/vector_forward" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_recycleView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="vertical"
             android:layout_marginTop="30dp"
-            android:orientation="vertical"
-
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView">
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:itemCount="10"
+            tools:listitem="@layout/list_item" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/task_recycleView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
 
-                android:scrollbars="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:itemCount="3"
-                tools:listitem="@layout/list_item" />
-        </LinearLayout>
+            android:contentDescription="@string/fab_description"
+            android:focusable="true"
+            app:backgroundTint="@color/forbuttons"
+            app:layout_constraintBottom_toBottomOf="parent"
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:contentDescription="@string/fab_description"
-
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:backgroundTint="@color/forbuttons"
-        app:srcCompat="@android:drawable/ic_input_add"
-        app:tint="@color/white"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 
 

@@ -70,8 +70,7 @@ class TodosFragment : Fragment() {
 
     private fun displaySubscribersList(){
         taskViewModel.getAllTask().observe(viewLifecycleOwner, Observer {
-            adapter.setList(it)
-            adapter.notifyDataSetChanged()
+            adapter.submitList(it)
         })
     }
 

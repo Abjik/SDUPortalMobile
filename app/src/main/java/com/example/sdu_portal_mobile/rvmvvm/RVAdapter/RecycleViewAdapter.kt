@@ -12,7 +12,6 @@ import com.example.sdu_portal_mobile.rvmvvm.Task
 
 class RecycleViewAdapter(private val clickListener: (Task) -> Unit) :
     ListAdapter<Task, MyViewHolder>(TaskDiffCallback) {
-    private val taskList = ArrayList<Task>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -21,18 +20,9 @@ class RecycleViewAdapter(private val clickListener: (Task) -> Unit) :
         return MyViewHolder(binding)
     }
 
-    override fun getItemCount(): Int {
-        return taskList.size
-    }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(taskList[position], clickListener)
-    }
-
-    fun setList(tasks: List<Task>) {
-        taskList.clear()
-        taskList.addAll(tasks)
-
+        holder.bind(getItem(position), clickListener)
     }
 
 }
