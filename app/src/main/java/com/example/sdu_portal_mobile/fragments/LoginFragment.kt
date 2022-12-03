@@ -28,11 +28,6 @@ class LoginFragment : Fragment() {
 
         val binding = FragmentLoginBinding.inflate(inflater)
         binding.button.setOnClickListener { view: View ->
-//                if(binding.login.text.toString().isNullOrBlank() && binding.password.text.toString().isNullOrBlank()){
-//                    view.findNavController().navigate(R.id.loginFragment)
-//                }else{
-//                    view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
-//                }
 
             lifecycleScope.launch {
                 var test: Boolean = false
