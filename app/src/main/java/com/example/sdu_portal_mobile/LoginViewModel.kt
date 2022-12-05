@@ -1,15 +1,21 @@
 package com.example.sdu_portal_mobile
 
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.*
+import com.example.sdu_portal_mobile.R.id.login
+import com.example.sdu_portal_mobile.fragments.LoginFragment
 import com.example.sdu_portal_mobile.repository.UserRepository
 import kotlinx.coroutines.launch
 
         //private val repository: UserRepository
+        //private val logi: LoginFragment
 class LoginViewModel(): ViewModel() {
-            private val _user = MutableLiveData("TEST")
+                                                    //${logi.getText(login)}
+            private val _user = MutableLiveData("Uesr id is: ")
             val user = _user
         }
+
 //    val allUser: LiveData<Int> = repository.allUsers
 //    val UsersSize: Int = repository.sizes
 
