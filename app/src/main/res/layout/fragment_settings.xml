@@ -136,9 +136,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/switch1"
             app:layout_constraintVertical_bias="0.6"
-            app:videoId="MKKxUUjeun4"
-
-            />
+            app:videoId="MKKxUUjeun4" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
