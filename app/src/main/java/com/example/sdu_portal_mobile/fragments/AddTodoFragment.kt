@@ -20,6 +20,8 @@ class AddTodoFragment : Fragment() {
         binding.addTodo.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_addTodoFragment_to_todosFragment)
         }
+        binding.addTodoBackButton.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_addTodoFragment_to_todosFragment)}
         return binding.root
     }
 }
