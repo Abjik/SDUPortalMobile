@@ -1,28 +1,41 @@
 package com.example.sdu_portal_mobile
 
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.sdu_portal_mobile.DB.AccDao
-import com.example.sdu_portal_mobile.DB.AccauntDatabase
-import com.example.sdu_portal_mobile.DB.AccauntTuple
-import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
-import kotlinx.coroutines.Dispatchers
+
+import android.annotation.SuppressLint
+import androidx.lifecycle.*
+import com.example.sdu_portal_mobile.R.id.login
+import com.example.sdu_portal_mobile.fragments.LoginFragment
+import com.example.sdu_portal_mobile.repository.UserRepository
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import okhttp3.internal.userAgent
 
-
-class LoginViewModel: ViewModel() {
-    private val _user = MutableLiveData("TEST")
-    val user = _user
-    fun onLoginClicked() {
-        viewModelScope.launch {
-
-//                val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().size
-//                val idname = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().toString()
+        //private val repository: UserRepository
+        //private val logi: LoginFragment
+class LoginViewModel(): ViewModel() {
+                                                    //${logi.getText(login)}
+            private val _user = MutableLiveData("Uesr id is: ")
+            val user = _user
         }
-    }
-}
+
+//    val allUser: LiveData<Int> = repository.allUsers
+//    val UsersSize: Int = repository.sizes
+
+//    fun onLoginClicked() {
+//        viewModelScope.launch {
+//            val idname = repository.allUsers
+//            val size = repository.sizes
+//            val testi: Boolean = false
+//
+//        }
+//    }
+//}
+
+//
+//class UserViewModelFactory(private val repository: UserRepository): ViewModelProvider.Factory{
+//    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+//        if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
+//            @Suppress("UNCHECKED_CAST")
+//            return LoginViewModel(repository) as T
+//        }
+//        throw IllegalArgumentException("Unknown ViewModel class")
+//    }
+//}

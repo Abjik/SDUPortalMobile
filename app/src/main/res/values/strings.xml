@@ -31,7 +31,7 @@
     <string name="password">PASSWORD</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name ="question">Have questions?</string>
+    <string name="question">Have questions?</string>
     <string name="error">Find error?</string>
     <string name="mode">Dark mode</string>
 

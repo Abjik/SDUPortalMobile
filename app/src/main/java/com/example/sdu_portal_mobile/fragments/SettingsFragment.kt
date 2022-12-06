@@ -11,8 +11,12 @@ import androidx.lifecycle.lifecycleScope
 import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.LoginViewModel
 import com.example.sdu_portal_mobile.databinding.FragmentSettingsBinding
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SettingsFragment : Fragment() {
     val viewModel: LoginViewModel by viewModels()
@@ -22,6 +26,9 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
+
+        val youTubePlayerView = binding.player
+        lifecycle.addObserver(youTubePlayerView)
         return binding.root
     }
 
@@ -29,6 +36,7 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.user.observe(viewLifecycleOwner) {
             binding.username.text = viewModel.user.value.toString()
+
         }
         binding.switchTheme.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
@@ -37,6 +45,7 @@ class SettingsFragment : Fragment() {
             else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
+
         }
     }
 }

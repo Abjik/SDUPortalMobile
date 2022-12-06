@@ -28,30 +28,23 @@ class LoginFragment : Fragment() {
 
         val binding = FragmentLoginBinding.inflate(inflater)
         binding.button.setOnClickListener { view: View ->
-//                if(binding.login.text.toString().isNullOrBlank() && binding.password.text.toString().isNullOrBlank()){
-//                    view.findNavController().navigate(R.id.loginFragment)
-//                }else{
-//                    view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
-//                }
 
             lifecycleScope.launch {
                 var test: Boolean = false
                 withContext(Dispatchers.IO) {
                     val logi = binding.login.text.toString()
-                    val size = AccauntDatabase.getInstance(requireContext()).getAccDao()
-                        .loadAllUsers().size
+                    val pass = binding.password.text.toString()
                     val idname =
                         AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers()
-
+                    val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsersSize()
                     for (i in IntRange(0, size - 1)) {
-                        if (logi == idname[i].toString()) {
+                        if (logi == idname[i].toString() && pass == idname[i].toString()) {
                             test = true
                             break
-
                         }
                     }
-
                 }
+
                 if (test) {
                     view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
                 } else {
