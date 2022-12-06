@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.sdu_portal_mobile.DB.AccauntDatabase
@@ -28,7 +29,14 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.user.observe(viewLifecycleOwner) {
             binding.username.text = viewModel.user.value.toString()
-
+        }
+        binding.switchTheme.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
     }
 }
