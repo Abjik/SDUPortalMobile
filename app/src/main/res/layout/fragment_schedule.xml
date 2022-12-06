@@ -59,11 +59,31 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:id="@+id/ScheduleRecyclerView"/>
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/scheduleAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="510dp"
+            android:clickable="true"
+
+            android:contentDescription="@string/fab_description"
+            android:focusable="true"
+            app:backgroundTint="@color/for_buttons"
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@color/white" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/ScheduleRecyclerView"/>
+    </FrameLayout>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

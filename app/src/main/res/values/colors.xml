@@ -10,8 +10,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main">#9395D3</color>
     <color name="main_2">#b4b6f0</color>
-    <color name="transperet">#009395D3</color>
-    <color name="forbuttons">#292695</color>
+    <color name="transparent">#009395D3</color>
+    <color name="for_buttons">#292695</color>
     <color name="gray">#CCCCCC</color>
     <color name="gray_Button">#DCDADA</color>
 

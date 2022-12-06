@@ -50,6 +50,9 @@ class ScheduleFragment : Fragment() {
 
         binding.imageVectorBack.setOnClickListener { onLeftClicked() }
         binding.imageVectorForward.setOnClickListener { onRightClicked() }
+        binding.scheduleAddButton.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_scheduleFragment_to_fragmentAddToSchedule)
+        }
 
         viewModel.currentWeekDay.observe(viewLifecycleOwner) { newWord ->
             binding.nameOfDay.text = newWord

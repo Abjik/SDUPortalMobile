@@ -151,7 +151,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:backgroundTint="@color/forbuttons"
+        app:backgroundTint="@color/for_buttons"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="@color/white"
         />
