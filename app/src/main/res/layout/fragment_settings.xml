@@ -25,7 +25,7 @@
             android:id="@+id/button2"
             android:layout_width="379dp"
             android:layout_height="61dp"
-            android:background="@color/transperet"
+            android:background="@color/transparent"
             android:outlineProvider="bounds"
             android:text="@string/question"
             android:textColor="@color/main"
@@ -51,7 +51,7 @@
             android:id="@+id/button3"
             android:layout_width="379dp"
             android:layout_height="61dp"
-            android:background="@color/transperet"
+            android:background="@color/transparent"
             android:outlineProvider="bounds"
             android:text="@string/error"
             android:textColor="@color/main"
@@ -62,10 +62,10 @@
             app:layout_constraintVertical_bias="0.397" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switch_theme"
             android:layout_width="379dp"
             android:layout_height="61dp"
-            android:background="@color/transperet"
+            android:background="@color/transparent"
             android:outlineProvider="bounds"
             android:text="@string/mode"
             android:textAlignment="center"

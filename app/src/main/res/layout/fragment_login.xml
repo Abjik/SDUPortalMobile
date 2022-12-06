@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:background="@color/transperet"
+            android:background="@color/transparent"
             android:fontFamily="@font/jost_semibold"
             android:minHeight="48dp"
             android:hint="@string/login"

@@ -7,70 +7,65 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sdu_portal_mobile.R
+import com.example.sdu_portal_mobile.ScheduleViewModel
+import com.example.sdu_portal_mobile.databinding.FragmentScheduleBinding
 
 class ScheduleFragment : Fragment() {
+
+    private lateinit var binding: FragmentScheduleBinding
+
+    private val viewModel: ScheduleViewModel by viewModels()
+
     var names =
-        arrayOf("9:00 10:00", "10:00 11:00", "11:00 12:00", "12:00 13:00", "13:00 14:00", "14:00 15:00", "15:00 16:00", "16:00 17:00", "17:00 18:00")
+        arrayOf(
+            "9:00 10:00",
+            "10:00 11:00",
+            "11:00 12:00",
+            "12:00 13:00",
+            "13:00 14:00",
+            "14:00 15:00",
+            "15:00 16:00",
+            "16:00 17:00",
+            "17:00 18:00"
+        )
 
-    companion object {
-
-        val weekdays =
-            arrayOf("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
-        var day: String = weekdays[0]
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view =
-            LayoutInflater.from(context).inflate(R.layout.fragment_schedule, container, false)
+    ): View {
+        binding = FragmentScheduleBinding.inflate(layoutInflater)
+        val view = binding.root
 
-        val weekdayView = view.findViewById<TextView>(R.id.nameOfDay)
-        weekdayView.text = day
+        binding.ScheduleRecyclerView.layoutManager = LinearLayoutManager(this.context)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.ScheduleRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this.context)
-        recyclerView.adapter = ListAdapter(names)
-
-        val leftArrow = view.findViewById<ImageView>(R.id.imageVectorBack)
-        val rightArrow = view.findViewById<ImageView>(R.id.imageVectorForward)
-
-        leftArrow.setOnClickListener{
-
-            if(weekdays.indexOf(day) != 0) {
-                day = weekdays[weekdays.indexOf(day)-1]
-            }
-            else{
-                day = weekdays[6]
-            }
-
-            val fragment = ScheduleFragment()
+        binding.ScheduleRecyclerView.adapter = ListAdapter(names)
 
 
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.activity_main_nav_host_fragment, fragment)?.commit()
+        binding.imageVectorBack.setOnClickListener { onLeftClicked() }
+        binding.imageVectorForward.setOnClickListener { onRightClicked() }
+        binding.scheduleAddButton.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_scheduleFragment_to_fragmentAddToSchedule)
         }
-        rightArrow.setOnClickListener{
 
-            if(weekdays.indexOf(day) != 6) {
-                day = weekdays[weekdays.indexOf(day)+1]
-            }
-            else{
-                day = weekdays[0]
-            }
-
-            val fragment = ScheduleFragment()
-
-
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.activity_main_nav_host_fragment, fragment)?.commit()
+        viewModel.currentWeekDay.observe(viewLifecycleOwner) { newWord ->
+            binding.nameOfDay.text = newWord
         }
+
+//        binding.addScheduleButton.setOnClickListener{ view ->
+//            view.findNavController().navigate(R.id.action_scheduleFragment_to_createScheduleFragment)
+//        }
         return view
     }
+
+    private fun onLeftClicked()=viewModel.setPreviousWeekDay()
+
+    private fun onRightClicked()=viewModel.setNextWeekDay()
+
 }
