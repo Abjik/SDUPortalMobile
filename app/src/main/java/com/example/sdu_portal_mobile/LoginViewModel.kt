@@ -2,8 +2,6 @@ package com.example.sdu_portal_mobile
 
 
 import androidx.lifecycle.*
-import com.example.sdu_portal_mobile.repository.UserRepository
-import kotlinx.coroutines.launch
 
         //private val repository: UserRepository
 class LoginViewModel(): ViewModel() {
