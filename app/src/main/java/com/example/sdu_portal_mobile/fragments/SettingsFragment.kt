@@ -7,16 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import com.example.sdu_portal_mobile.DB.AccauntDatabase
-import com.example.sdu_portal_mobile.LoginViewModel
+import com.example.sdu_portal_mobile.viewModels.LoginViewModel
 import com.example.sdu_portal_mobile.databinding.FragmentSettingsBinding
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class SettingsFragment : Fragment() {
     val viewModel: LoginViewModel by viewModels()
