@@ -52,8 +52,9 @@ class AddToScheduleViewModel : ViewModel() {
         sduId: String, weekDay: String, timeInterval: String, courseCode: String,
         courseName: String, cabinet: String
     ) {
+
         val lesson = Lesson(sduId, weekDay, timeInterval, courseCode, courseName, cabinet)
-        database.child(LESSONKEY).setValue(lesson)
+        database.child(LESSONKEY).child(sduId).push().setValue(lesson)
     }
 
 }

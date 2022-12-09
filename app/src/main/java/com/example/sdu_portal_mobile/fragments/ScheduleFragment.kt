@@ -71,8 +71,10 @@ class ScheduleFragment : Fragment() {
 
                     for (lessonSnapshot in snapshot.children){
 
-                        val lesson = lessonSnapshot.getValue(Lesson::class.java)
-                        lessonArrayList.add(lesson!!)
+                        for(idSnapshot in lessonSnapshot.children){
+                            val lesson = idSnapshot.getValue(Lesson::class.java)
+                            lessonArrayList.add(lesson!!)
+                        }
 
                     }
 
