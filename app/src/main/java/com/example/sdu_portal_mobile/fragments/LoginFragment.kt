@@ -20,6 +20,15 @@ import kotlinx.coroutines.withContext
 
 class LoginFragment : Fragment() {
 
+    companion object {
+        private var sduId: String = ""
+
+        public fun getSduId()
+                : String {
+            return sduId
+        }
+    }
+
     @SuppressLint("SuspiciousIndentation")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +47,8 @@ class LoginFragment : Fragment() {
                         AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers()
                     val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsersSize()
                     for (i in IntRange(0, size - 1)) {
-                        if (logi == idname[i].toString() && pass == idname[i].toString()) {
+                        if (logi == pass) {
+                            sduId = logi
                             test = true
                             break
                         }
@@ -56,4 +66,6 @@ class LoginFragment : Fragment() {
         }
         return binding.root
     }
+
+
 }

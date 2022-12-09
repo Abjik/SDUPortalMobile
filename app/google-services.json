@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "271548766408",
+    "project_id": "sdu-mobile-cd4a4",
+    "storage_bucket": "sdu-mobile-cd4a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271548766408:android:456391b815ea526a422dfd",
+        "android_client_info": {
+          "package_name": "com.plcoding.sdu_portal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271548766408-3bbhklnbffb1l9s1dp2uukssqgk0gjlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC2Wsu6EZcr4Mfs4EUFSmPmjV-qRaG17Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271548766408-3bbhklnbffb1l9s1dp2uukssqgk0gjlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,14 +1,9 @@
-package com.example.sdu_portal_mobile
+package com.example.sdu_portal_mobile.viewModels
 
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.*
-import com.example.sdu_portal_mobile.R.id.login
-import com.example.sdu_portal_mobile.fragments.LoginFragment
-import com.example.sdu_portal_mobile.repository.UserRepository
-import kotlinx.coroutines.launch
 
-        //private val repository: UserRepository
+//private val repository: UserRepository
         //private val logi: LoginFragment
 class LoginViewModel(): ViewModel() {
                                                     //${logi.getText(login)}

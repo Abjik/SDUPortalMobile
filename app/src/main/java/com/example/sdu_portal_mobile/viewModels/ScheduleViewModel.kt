@@ -1,4 +1,4 @@
-package com.example.sdu_portal_mobile
+package com.example.sdu_portal_mobile.viewModels
 
 import android.app.Application
 import android.provider.SyncStateContract.Helpers.update
