@@ -1,20 +1,19 @@
 package com.example.sdu_portal_mobile.fragments
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.asFlow
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import androidx.room.Room
 import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.withIndex
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -43,7 +42,7 @@ class LoginFragment : Fragment() {
                         AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers()
                     val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsersSize()
                     for (i in IntRange(0, size - 1)) {
-                        if (logi == idname[i].toString() && pass == idname[i].toString()) {
+                        if (logi == idname.value?.get(i).toString() && pass == idname.value?.get(i).toString()) {
                             test = true
                             break
                         }

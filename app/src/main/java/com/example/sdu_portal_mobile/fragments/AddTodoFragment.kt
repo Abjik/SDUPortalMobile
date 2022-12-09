@@ -29,8 +29,8 @@ class AddTodoFragment : Fragment() {
         val dao = TaskDataBase.getInstance(requireContext()).taskDAO
         val repository = TaskRepository(dao)
         val factory = TaskViewModelFactory(repository)
-        taskViewModel = ViewModelProvider(this, factory).get(TaskViewModel::class.java)
-        binding.myViewModel = taskViewModel
+        taskViewModel = ViewModelProvider(this, factory)[TaskViewModel::class.java]
+        taskViewModel.also { binding.myViewModel = it }
         binding.lifecycleOwner = this
 
         taskViewModel.message.observe(viewLifecycleOwner, Observer{
