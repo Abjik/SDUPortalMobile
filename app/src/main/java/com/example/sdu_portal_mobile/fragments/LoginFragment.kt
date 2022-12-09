@@ -24,6 +24,9 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers().observe(viewLifecycleOwner) {
+            it.size
+        }
 
         val binding = FragmentLoginBinding.inflate(inflater)
         binding.button.setOnClickListener { view: View ->
