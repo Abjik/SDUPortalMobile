@@ -10,19 +10,16 @@ import java.util.*
 //    application: Application
 //)
 class ScheduleViewModel : ViewModel() {
-//    val schedules = database.getAllSchedules()
 
     private var day =  getCurrentWeekDay()
     private var weekdays =
         arrayOf("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
 
-
-
     private var _currentWeekDay = MutableLiveData<String>(weekdays[day])
     val currentWeekDay: LiveData<String>
         get() = _currentWeekDay
 
-    fun getCurrentWeekDay(): Int {
+    private fun getCurrentWeekDay(): Int {
         val calendar = Calendar.getInstance()
         val day = calendar[Calendar.DAY_OF_WEEK]
 

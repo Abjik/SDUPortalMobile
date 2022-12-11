@@ -1,6 +1,7 @@
 package com.example.sdu_portal_mobile.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,11 +21,7 @@ class FragmentAddToSchedule: Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        var calendar: Calendar = Calendar.getInstance()
-        var day =  if ((calendar.get(Calendar.DAY_OF_WEEK)-2) < 0) {7 - (calendar.get(
-            Calendar.DAY_OF_WEEK)-2) } else (calendar.get(Calendar.DAY_OF_WEEK)-2)
-        var weekdays =
-            arrayOf("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+
         val binding = FragmentAddToScheduleBinding.inflate(inflater)
         val binding2 = FragmentScheduleBinding.inflate(inflater)
 
@@ -32,7 +29,7 @@ class FragmentAddToSchedule: Fragment() {
             binding2.ScheduleRecyclerView.adapter = ListAdapter(it)
         }
         binding.submitScheduleButton.setOnClickListener{view: View ->
-            viewModel.addLessonToSchedule(LoginFragment.getSduId(), weekdays[day], binding.timeSpinner.selectedItem.toString(),
+            viewModel.addLessonToSchedule(LoginFragment.getSduId(), ScheduleFragment.dayOfTheWeek, binding.timeSpinner.selectedItem.toString(),
             binding.codes.selectedItem.toString(), "Algebra", "G403")
             view.findNavController().navigate(R.id.action_fragmentAddToSchedule_to_scheduleFragment)
         }
