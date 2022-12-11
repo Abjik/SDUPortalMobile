@@ -25,10 +25,10 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        viewModel.u.observe(viewLifecycleOwner) {
-//            binding.username.text = viewModel.u.value.toString()
-//        }
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.u.observe(viewLifecycleOwner) {
+            binding.username.text = viewModel.u.value.toString()
+        }
+    }
 }
