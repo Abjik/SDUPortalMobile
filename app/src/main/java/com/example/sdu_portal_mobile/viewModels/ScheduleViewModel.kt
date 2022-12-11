@@ -1,16 +1,8 @@
 package com.example.sdu_portal_mobile.viewModels
 
-import android.app.Application
-import android.provider.SyncStateContract.Helpers.update
-import android.text.method.TextKeyListener.clear
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.sdu_portal_mobile.DB.ScheduleDatabaseDao
-import com.example.sdu_portal_mobile.DB.ScheduleTable
-import kotlinx.coroutines.launch
 import java.util.*
 
 //(
@@ -18,18 +10,30 @@ import java.util.*
 //    application: Application
 //)
 class ScheduleViewModel : ViewModel() {
-//    val schedules = database.getAllSchedules()
 
-    private var calendar: Calendar = Calendar.getInstance()
-    private var day =  if ((calendar.get(Calendar.DAY_OF_WEEK)-2) < 0) {7 - (calendar.get(Calendar.DAY_OF_WEEK)-2) } else (calendar.get(Calendar.DAY_OF_WEEK)-2)
+    private var day =  getCurrentWeekDay()
     private var weekdays =
         arrayOf("Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
-
-
 
     private var _currentWeekDay = MutableLiveData<String>(weekdays[day])
     val currentWeekDay: LiveData<String>
         get() = _currentWeekDay
+
+    private fun getCurrentWeekDay(): Int {
+        val calendar = Calendar.getInstance()
+        val day = calendar[Calendar.DAY_OF_WEEK]
+
+        when (day) {
+            Calendar.SUNDAY -> {return 6}
+            Calendar.MONDAY -> {return 0}
+            Calendar.TUESDAY -> {return 1}
+            Calendar.WEDNESDAY -> {return 2}
+            Calendar.THURSDAY -> {return 3}
+            Calendar.FRIDAY -> {return 4}
+            Calendar.SATURDAY -> {return 5}
+        }
+        return 0
+    }
 
     fun setPreviousWeekDay(){
         if(day == 0) {
