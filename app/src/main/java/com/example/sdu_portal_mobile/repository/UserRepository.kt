@@ -8,7 +8,7 @@ import com.example.sdu_portal_mobile.DB.AccDao
 class UserRepository(private val accDao: AccDao){
 //    val allUsers: LiveData<Int> = accDao.loadAllUsers()
 //    val size = accDao.loadAllUsersSize()
-    fun getUse(): LiveData<List<Int>> {
+    fun getUse(): List<Int> {
         return accDao.loadAllUsers()
     }
 

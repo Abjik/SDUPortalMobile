@@ -9,7 +9,7 @@ import androidx.room.Query
 interface AccDao {
 
     @Query("select ID from students")
-    fun loadAllUsers(): LiveData<List<Int>>
+    fun loadAllUsers(): List<Int>
 
     @Query("select COUNT(ID) from students")
     fun loadAllUsersSize(): Int
