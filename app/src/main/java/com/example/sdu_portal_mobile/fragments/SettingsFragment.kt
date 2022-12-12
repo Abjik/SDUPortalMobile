@@ -7,12 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.runtime.snapshots.Snapshot.Companion.observe
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import com.example.sdu_portal_mobile.DB.AccauntDatabase
-import com.example.sdu_portal_mobile.LoginViewModel
 import com.example.sdu_portal_mobile.databinding.FragmentSettingsBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.sdu_portal_mobile.viewModels.LoginViewModel
 
 class SettingsFragment : Fragment() {
     private val viewModel: LoginViewModel by viewModels()
@@ -25,10 +21,10 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        viewModel.u.observe(viewLifecycleOwner) {
-            binding.username.text = viewModel.u.value.toString()
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        viewModel.u.observe(viewLifecycleOwner) {
+//            binding.username.text = viewModel.u.value.toString()
+//        }
+//    }
 }
