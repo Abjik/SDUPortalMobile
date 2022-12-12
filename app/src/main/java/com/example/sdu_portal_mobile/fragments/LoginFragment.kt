@@ -8,17 +8,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.room.Room
 import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.R
 import com.example.sdu_portal_mobile.databinding.FragmentLoginBinding
+import com.example.sdu_portal_mobile.viewModels.LoginViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class LoginFragment : Fragment() {
+
+    private val viewModel: LoginViewModel by viewModels()
+//    private lateinit var binding: FragmentLoginBinding
 
     companion object {
         private var sduId: String = ""
@@ -48,7 +53,7 @@ class LoginFragment : Fragment() {
                     val size =
                         AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsersSize()
                     for (i in IntRange(0, size - 1)) {
-                        if (logi == idname[i].toString() && idname[i].toString() == pass) {
+                        if (logi == idname[i].toString() && pass == idname[i].toString()) {
                             sduId = logi
                             test = true
                             break
@@ -63,6 +68,17 @@ class LoginFragment : Fragment() {
                 }
             }
 
+//            binding.button.setOnClickListener { view: View ->
+//                viewModel.login(requireContext(), binding.login.text.toString(), binding.password.text.toString())
+//                viewModel.test.observe(viewLifecycleOwner){
+//                    if(viewModel.test.value == true){
+//                        view.findNavController().navigate(R.id.action_loginFragment_to_scheduleFragment)
+//                    }
+//                    else{
+//                        view.findNavController().navigate(R.id.loginFragment)
+//                    }
+//                }
+//            }
 
         }
         return binding.root
