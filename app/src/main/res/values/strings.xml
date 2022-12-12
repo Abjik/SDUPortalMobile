@@ -31,7 +31,25 @@
     <string name="password">PASSWORD</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name ="question">Have questions?</string>
+    <string name="question">Have questions?</string>
     <string name="error">Find error?</string>
     <string name="mode">Dark mode</string>
+
+    <string-array name="time">
+        <item>9:00–10:00</item>
+        <item>10:00–11:00</item>
+        <item>11:00–12:00</item>
+        <item>12:00–13:00</item>
+        <item>13:00–14:00</item>
+        <item>14:00–15:00</item>
+        <item>15:00–16:00</item>
+        <item>16:00–17:00</item>
+        <item>17:00–18:00</item>
+    </string-array>
+
+    <string-array name="codes">
+        <item>MDE101</item>
+        <item>MDE505</item>
+        <item>CSS108</item>
+    </string-array>
 </resources>

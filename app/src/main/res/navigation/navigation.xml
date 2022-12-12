@@ -24,7 +24,11 @@
         android:id="@+id/scheduleFragment"
         android:name="com.example.sdu_portal_mobile.fragments.ScheduleFragment"
         android:label="fragment_schedule"
-        tools:layout="@layout/fragment_schedule" />
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_fragmentAddToSchedule"
+            app:destination="@id/fragmentAddToSchedule" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.sdu_portal_mobile.fragments.SettingsFragment"
@@ -73,4 +77,12 @@
         android:label="WeatherActivity"
         tools:layout="@layout/activity_weather">
     </activity>
+    <fragment
+        android:id="@+id/fragmentAddToSchedule"
+        android:name="com.example.sdu_portal_mobile.fragments.FragmentAddToSchedule"
+        android:label="FragmentAddToSchedule" >
+        <action
+            android:id="@+id/action_fragmentAddToSchedule_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
 </navigation>
