@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/add_todo_back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="70dp"
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/transperet"
+                android:background="@color/transparent"
                 android:fontFamily="@font/jost_semibold"
                 android:minHeight="48dp"
                 android:text="@={myViewModel.inputTitle}"
@@ -137,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/transperet"
+                android:background="@color/transparent"
                 android:fontFamily="@font/jost_semibold"
                 android:minHeight="48dp"
                 android:text="@={myViewModel.inputSubTitle}"
@@ -170,7 +170,7 @@
                 android:id="@+id/add_todo_button"
                 android:layout_width="300dp"
                 android:layout_height="90dp"
-                android:background="@color/forbuttons"
+                android:background="@color/for_buttons"
                 android:fontFamily="@font/jost_bold"
 
                 android:text="@={myViewModel.addTodoButton}"

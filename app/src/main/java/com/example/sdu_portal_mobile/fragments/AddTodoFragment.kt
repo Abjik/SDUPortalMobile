@@ -44,8 +44,8 @@ class AddTodoFragment : Fragment() {
             view.findNavController().navigate(R.id.action_addTodoFragment_to_todosFragment)
             taskViewModel.addTask()
         }
-
-
+        binding.addTodoBackButton.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_addTodoFragment_to_todosFragment)}
         return binding.root
     }
 }
