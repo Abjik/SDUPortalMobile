@@ -12,7 +12,6 @@ import kotlinx.coroutines.withContext
 //private val repository: UserRepository
         //private val logi: LoginFragment
 class LoginViewModel(): ViewModel() {
-
     private val _user = MutableLiveData("User id is: ")
     val user = _user
 
