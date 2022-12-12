@@ -7,7 +7,7 @@ import androidx.lifecycle.*
         //private val logi: LoginFragment
 class LoginViewModel(): ViewModel() {
                                                     //${logi.getText(login)}
-            private val _user = MutableLiveData("Uesr id is: ")
+            private val _user = MutableLiveData("User id is: ")
             val user = _user
         }
 

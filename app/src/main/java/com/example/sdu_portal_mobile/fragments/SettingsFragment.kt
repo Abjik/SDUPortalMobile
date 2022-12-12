@@ -26,10 +26,7 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.user.observe(viewLifecycleOwner) {
-            binding.username.text = viewModel.user.value.toString()
-
-        }
+        binding.username.text = "User id is:"+LoginFragment.getSduId()
         binding.switchTheme.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)

@@ -1,18 +1,13 @@
 package com.example.sdu_portal_mobile
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import androidx.room.Room
-import com.example.sdu_portal_mobile.DB.AccauntDatabase
 import com.example.sdu_portal_mobile.databinding.ActivityMainBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+
 
 class MainActivity : AppCompatActivity() {
 

@@ -23,7 +23,7 @@ class LoginFragment : Fragment() {
     companion object {
         private var sduId: String = ""
 
-        public fun getSduId()
+        fun getSduId()
                 : String {
             return sduId
         }
@@ -45,9 +45,10 @@ class LoginFragment : Fragment() {
                     val pass = binding.password.text.toString()
                     val idname =
                         AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsers()
-                    val size = AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsersSize()
+                    val size =
+                        AccauntDatabase.getInstance(requireContext()).getAccDao().loadAllUsersSize()
                     for (i in IntRange(0, size - 1)) {
-                        if (logi == pass) {
+                        if (logi == idname[i].toString() && idname[i].toString() == pass) {
                             sduId = logi
                             test = true
                             break

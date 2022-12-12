@@ -55,14 +55,18 @@ class TodosFragment : Fragment() {
         binding.taskRecycleView.adapter = adapter
         initRecyclerView()
 
-//        loadTodos()
-//        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)
-//        binding.taskRecycleView.setLayoutManager(layoutManager)
-//        rvAdapter = RVAdapter(taskList)
-//        binding.taskRecycleView.adapter = rvAdapter
+        taskViewModel.currentWeekDay.observe(viewLifecycleOwner) { newWord ->
+            binding.nameOfDay.text = newWord
+        }
+        binding.imageVectorBack.setOnClickListener { onLeftClicked() }
+        binding.imageVectorForward.setOnClickListener { onRightClicked() }
 
         return binding.root
     }
+
+    private fun onLeftClicked() = taskViewModel.setPreviousWeekDay()
+
+    private fun onRightClicked() = taskViewModel.setNextWeekDay()
 
     private fun initRecyclerView(){
         displaySubscribersList()
