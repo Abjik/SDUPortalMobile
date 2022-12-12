@@ -18,10 +18,10 @@ class TaskViewModel(private val repository: TaskRepository):ViewModel() {
     }
 
     fun addTask(){
-        if (inputTitle == null){
+        if (inputTitle.value == null){
             statusMessage.value = Event("Enter Todo Title")
         }
-        else if(inputSubTitle == null){
+        else if(inputSubTitle.value == null){
             statusMessage.value = Event("Enter Deadline")
         }
         else {
